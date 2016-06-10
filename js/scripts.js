@@ -22,12 +22,12 @@ var nowArray = function(num){
 // TRANSLATES EVERY ITEM IN THE ARRAY TO PING PONG TERMS
 var converter = function(numberArray){
   for( var i = 1 ; i <= numberArray.length ; i++ ) {
-    if ((numberArray[i] - 1) % 3 === 0) {
+    if ((numberArray[i-1]) % 3 === 0) {
       pingPongArray.push("ping");
     }
-    // else if (((numberArray[i]) % 5) === 0) {
-    //   pingPongArray.push("pong");
-    // }
+    else if (((numberArray[i-1]) % 5) === 0 ) {
+      pingPongArray.push("pong");
+    }
     // (()(numberArray[i]- 1) % 3) === 0 && (numberArray[i] % 5) === 0 )
     else {
       pingPongArray.push(i);

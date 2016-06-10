@@ -1,7 +1,7 @@
 
 // BUSINESS LOGIC
 var numberList = [];
-var initialArray = [];
+var pingPongArray = [];
 
 
 // TURNS INPUT NUMBER INTO AN ARRAY
@@ -11,23 +11,29 @@ var nowArray = function(num){
     for ( k=1 ; k <= num ; k++ ){
     numberList.push(k);
     }
+    converter(numberList);
+  } else {
+    alert("Please enter a number");
   }
 }
+// CALL CONVERTER FUNCTION TO TURN NUMBERLIST INTO PING PONG LIST
+
 
 // TRANSLATES EVERY ITEM IN THE ARRAY TO PING PONG TERMS
-// var converter = function(initialArray){
-//   for( var i = 0 ; i < initialArray.length ; i++ ) {
-//     if ( nowArray % 3 === 0 && nowArray % 5 === 0 ){
-//       numberList.push("pingpong");
-//     }
-//     else if ( nowArray % 5 === 0) {
-//       numberList.push("pong");
-//     }
-//     else {
-//       numberList.push(i);
-//     }
-//     }
-// }
+var converter = function(numberArray){
+  for( var i = 1 ; i <= numberArray.length ; i++ ) {
+    if ((numberArray[i] - 1) % 3 === 0) {
+      pingPongArray.push("ping");
+    }
+    // else if (((numberArray[i]) % 5) === 0) {
+    //   pingPongArray.push("pong");
+    // }
+    // (()(numberArray[i]- 1) % 3) === 0 && (numberArray[i] % 5) === 0 )
+    else {
+      pingPongArray.push(i);
+    }
+    }
+}
 
 
 // USER LOGIC
@@ -40,8 +46,8 @@ $(document).ready(function() {
 
     nowArray(enteredNumber);
 
-    for ( var j=0 ; j < numberList.length; j++) {
-      $("#results").append("<li>" + numberList[j] + "</li>");
+    for ( var j=0 ; j < pingPongArray.length; j++) {
+      $("#results").append("<li>" + pingPongArray[j] + "</li>");
     };
     $("#answer").show();
   });

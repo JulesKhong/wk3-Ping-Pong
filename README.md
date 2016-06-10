@@ -17,7 +17,7 @@ _This game allows users to submit a number, and in return will see all of the nu
 
 ## Specifications
 
-* When a user enter a number, the game will return a list of numbers between 1 and the          user's number.
+* When a user enter a number, the game will return a list of numbers between 1 and the user's number.
   Example Input: 5
   Example Output: 1, 2, 3, 4, 5
 

@@ -1,3 +1,41 @@
 #answer {
   display: none;
 }
+
+img {
+  width: 100%;
+}
+
+#btn {
+  margin-top: 20px;
+}
+
+ul {
+  text-align: left;
+}
+
+#userInput {
+  color: #333333;
+}
+
+.btn-primary {
+  margin-top: 20px;
+  background-color: white;
+  color: #04ADBF;
+}
+
+.btn-primary:hover {
+  background-color: #04ADBF;
+  color: white;
+  border: white solid 1px;
+}
+
+.jumbotron {
+  background-color: #04ADBF;
+  text-align: center;
+  color: white;
+}
+
+h4 {
+  color: #ff00aa;
+}

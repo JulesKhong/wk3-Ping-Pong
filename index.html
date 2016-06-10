@@ -10,20 +10,32 @@
   </head>
   <body>
     <div class="container">
-      <h1>Ping Pong</h1>
+      <div class="jumbotron">
+        <h1>Ping Pong</h1>
+        <p class="lead">
+          To play, enter a number and see how many pings and pongs you can create!
+        </p>
+        <hr>
       <form id="game">
         <div class="form-group">
-          <label for="userInput">To play, enter a number and see how many pings and pongs you can create!</label>
-          <input id="userInput" type="text">
+          <input id="userInput" type="text"><br>
           <button type="submit" class="btn btn-primary">Let's play</button>
         </div>
+      </div>
         <div id="answer">
-          <h3>Your answer is:</h3>
-          <ul id="results">
-          </ul>
+          <div class="row">
+              <div class="col-md-4">
+                <h3>Your numbers are:</h3>
+                <ul id="results">
+                </ul>
+                <h4>Nice work!</h4>
+              </div>
+              <div class="col-md-8">
+                <img src="img/ping.jpg" alt="Ping Pong champions"/>
+              </div>
+          </div>
         </div>
       </form>
-
     </div>
   </body>
 </html>

@@ -1,16 +1,33 @@
 
 // BUSINESS LOGIC
+var numberList = [];
+var initialArray = [];
 
-var converter = function(number){
-for( i = 0 ; i < number ; i++ ) {
-  if ( number % 3 === 0 && number % 5 === 0 ){
-    var newNumber = "PingPong";
+
+// TURNS INPUT NUMBER INTO AN ARRAY
+var nowArray = function(num){
+  if (!isNaN(num)){
+    // var numberArray = num.map(Number);
+    for ( k=1 ; k <= num ; k++ ){
+    numberList.push(k);
+    }
   }
-  else {
-    var newNumber = 4;
-  }
-  } return newNumber;
 }
+
+// TRANSLATES EVERY ITEM IN THE ARRAY TO PING PONG TERMS
+// var converter = function(initialArray){
+//   for( var i = 0 ; i < initialArray.length ; i++ ) {
+//     if ( nowArray % 3 === 0 && nowArray % 5 === 0 ){
+//       numberList.push("pingpong");
+//     }
+//     else if ( nowArray % 5 === 0) {
+//       numberList.push("pong");
+//     }
+//     else {
+//       numberList.push(i);
+//     }
+//     }
+// }
 
 
 // USER LOGIC
@@ -19,9 +36,13 @@ $(document).ready(function() {
   $("form#game").submit(function(event){
     event.preventDefault();
     var enteredNumber = parseInt($("#userInput").val());
-    var output = converter(enteredNumber);
+    // var output = converter(enteredNumber);
 
-    $("#results").append("<li>" + output + "</li>");
+    nowArray(enteredNumber);
+
+    for ( var j=0 ; j < numberList.length; j++) {
+      $("#results").append("<li>" + numberList[j] + "</li>");
+    };
     $("#answer").show();
   });
 });

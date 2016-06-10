@@ -22,13 +22,15 @@ var nowArray = function(num){
 // TRANSLATES EVERY ITEM IN THE ARRAY TO PING PONG TERMS
 var converter = function(numberArray){
   for( var i = 1 ; i <= numberArray.length ; i++ ) {
-    if ((numberArray[i-1]) % 3 === 0) {
-      pingPongArray.push("ping");
+    if ((numberArray[i-1] % 3 === 0) && ((numberArray[i-1] % 5) === 0 )) {
+      pingPongArray.push("pingpong");
     }
     else if (((numberArray[i-1]) % 5) === 0 ) {
       pingPongArray.push("pong");
     }
-    // (()(numberArray[i]- 1) % 3) === 0 && (numberArray[i] % 5) === 0 )
+    else if ((numberArray[i-1]) % 3 === 0) {
+      pingPongArray.push("ping");
+    }
     else {
       pingPongArray.push(i);
     }
@@ -49,6 +51,7 @@ $(document).ready(function() {
     for ( var j=0 ; j < pingPongArray.length; j++) {
       $("#results").append("<li>" + pingPongArray[j] + "</li>");
     };
+    pingPongArray=[];
     $("#answer").show();
   });
 });

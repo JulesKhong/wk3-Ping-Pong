@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <links href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <links href="css/styles.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="js/jquery-1.12.4.js"></script>
     <script src="js/scripts.js"></script>
     <meta charset="utf-8">
@@ -11,14 +11,15 @@
   <body>
     <div class="container">
       <h1>Ping Pong</h1>
-      <form>
+      <form id="game">
         <div class="form-group">
           <label for="userInput">To play, enter a number and see how many pings and pongs you can create!</label>
-          <input type="text" class="form-group">
-          <button type="submit" name="btn btn-primary">Let's play</button>
+          <input id="userInput" type="text">
+          <button type="submit" class="btn btn-primary">Let's play</button>
         </div>
       </form>
-      <div class="results">
+      <div id="answer">
+        <h3>Your answer is:</h3>
         <ul id="results">
         </ul>
       </div>
